@@ -35,9 +35,7 @@
     "src/**/*.tsx",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "vitest-setup.ts"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "!.storybook"]
+    "vitest-setup.ts"
+  ],
+  "exclude": ["node_modules", "dist", "!.storybook"]
 }
