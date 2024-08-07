@@ -100,23 +100,4 @@ export default [
       // その他のVitest関連ルールをここに追加
     },
   },
-  {
-    // Node.js環境で動作するファイルの設定
-    files: ["tailwind.config.js"],
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "script",
-      globals: {
-        module: "readonly",
-        require: "readonly",
-      },
-    },
-    // または `env` を使って Node 環境を設定する
-    // env: {
-    //   node: true,
-    // },
-    rules: {
-      // Node.js用の特定のルールをここに追加できます
-    },
-  },
 ];
