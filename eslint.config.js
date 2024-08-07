@@ -16,7 +16,7 @@ export default [
       ecmaVersion: 2020,
       sourceType: "module",
     },
-    ignores: ["dist", ".eslintrc.cjs", "eslint.config.js"],
+    ignores: ["dist/**", ".eslintrc.cjs", "eslint.config.js"],
     settings: {
       react: {
         version: "detect",
@@ -98,6 +98,25 @@ export default [
       "vitest/prefer-to-have-length": "warn", // toHaveLengthを推奨
       "vitest/valid-expect": "error", // 有効なexpectを強制
       // その他のVitest関連ルールをここに追加
+    },
+  },
+  {
+    // Node.js環境で動作するファイルの設定
+    files: ["tailwind.config.js"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "script",
+      globals: {
+        module: "readonly",
+        require: "readonly",
+      },
+    },
+    // または `env` を使って Node 環境を設定する
+    // env: {
+    //   node: true,
+    // },
+    rules: {
+      // Node.js用の特定のルールをここに追加できます
     },
   },
 ];
